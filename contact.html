@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<title>Contact</title>
+		<link href="Css/normalize.css" rel="stylesheet"> 
+		<link href="Css/font-awesome.css" rel="stylesheet"> 
+		<link href="Css/bootstrap.css" rel="stylesheet">
+		<link href="Css/animation.css" rel="stylesheet">
+		<link href="Css/style.css" rel="stylesheet">
+	</head>
+	<body>
+
+       <div class="container-fluid">
+
+           	<script>
+		var map;
+		function initMap() {
+		  map = new google.maps.Map(document.getElementById('map'), {
+		    center: {lat: 31.5213544, lng: 34.4437298},
+		    zoom: 12
+		  });
+		  
+		  var myLatLng={lat: 31.5213544, lng: 34.4437298};
+		  
+		    var marker = new google.maps.Marker({
+		    position: myLatLng,
+		    map: map,
+		    title: 'Hello World!'
+		  });
+		  
+		  var contentString='<div id="content">'+
+		      '<div id="siteNotice">'+
+		      '</div>'+
+		      '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
+		      '<div id="bodyContent">'+
+		      '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+		      'sandstone rock formation in the southern part of the '+
+		      'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
+		      'south west of the nearest large town, Alice Springs; 450&#160;km '+
+		      '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
+		      'features of the Uluru - Kata Tjuta National Park. Uluru is '+
+		      'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
+		      'Aboriginal people of the area. It has many springs, waterholes, '+
+		      'rock caves and ancient paintings. Uluru is listed as a World '+
+		      'Heritage Site.</p>'+
+		      '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+		      'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+		      '(last visited June 22, 2009).</p>'+
+		      '</div>'+
+		      '</div>';
+			  
+			  var infoWindow = new google.maps.InfoWindow({
+				  content: contentString	  
+			  });
+			  
+			  marker.addListener('click', function() {
+		    infoWindow.open(map, marker);
+		  });
+			  
+			  
+			  
+		}
+		</script>
+<script src="https://maps.googleapis.com/maps/api/js?callback=initMap"async defer></script>
+
+
+ <!-- Menu -->
+    <div class="row menu">
+	    <div class="col-xs-12">
+	        <div class="container">
+	        <div class="col-xs-3">
+	        	<div class="logo">Tantos<span class="main-color">Studio</span></div>
+	        </div>
+	        <div class="col-sm-8 col-xs-12">
+	            <button class="btn default-btn menu-btn"><i class="fa fa-bars fa-lg"></i></button>
+	        </div>
+	        <div class="col-sm-8 col-xs-12">
+	        	<ul class="hide-menu">
+	        	    <li><a href="home.html">Home</a></li>
+	        		<li><a href="about.html">About</a></li>
+					<li><a href="services.html">Services</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="#">SiteMap</a></li>
+	        	</ul>
+	        </div>
+	     	</div>
+	    </div>
+    </div>
+    <!-- Menu -->
+
+       <!-- Breacrumb -->
+	    <div class="row">
+		  	<div class="container">
+		  	    <div class="col-xs-12 col-remove-lpadding">
+		            <div class="breadcrumb">
+			    		<ol>
+			    			<li><a href="home.html">Home</a></li>
+			    			<li><a href="#">Contact</a></li>
+			    			
+			    		</ol>
+		    	   </div>
+		        </div>
+		    </div>	
+	    </div>
+	    <!-- Breacrumb -->
+
+
+	    <div class="row map">
+      	<div class="container">
+      		<div class="col-xs-12 col-remove-lpadding">
+      			<div id="map" style="width:100%;height:400px;"></div>
+      		</div>
+      	</div>
+      </div>
+
+
+      <!-- Content -->
+
+      <div class="row content">
+      	<div class="container">
+      		<div class="col-sm-4 col-xs-12">
+
+      		<div class="contact-info">
+      		   <h4 class="upper">Company Information</h4>
+      			<div class="row block">
+			       	<div class="col-sm-3 col-xs-2 text-center">
+			       		<i class="glyphicon glyphicon-map-marker border"></i>
+			       	</div>
+			       	<div class="col-sm-9 col-xs-10">
+			       		<p>Gaza Strip,<br> Plalestine Str</p>
+			       	</div>
+			     </div>
+
+      		 <hr></hr>
+
+      		 <div class="row block">
+			       	<div class="col-sm-3 col-xs-2 text-center">
+			       		<i class="glyphicon glyphicon-envelope border"></i>
+			       	</div>
+			       	<div class="col-sm-9 col-xs-10">
+			       		<p>g@gmail.com <br>t@gmail.com</p>
+			       	</div>
+			     </div>		
+      		</div>
+      			
+      		</div>
+      		<div class="col-sm-8 col-xs-12 contact-info">
+      		    <h4 class="upper">contact us</h4>
+      			 <div class="form-group col-sm-6 col-remove-lpadding">
+				     <input type="email" class="form-control" id="exampleInputEmail1" placeholder="ghada">
+				</div>
+				<div class="form-group col-sm-6 col-remove-rpadding">
+				 <input type="text" class="form-control" id="exampleInputPassword1" placeholder="g@gmail.com">
+			    </div>
+
+				<div class="form-group ">
+				     <textarea class="form-control"  placeholder="message ..."></textarea>
+				</div>
+
+				<button type="button" class=" form-group btn btn-default send-btn upper">Send</button>
+      		</div>
+
+      	</div>
+      </div>
+
+      <!-- Content -->
+
+    <!-- Footer -->
+	    <div class="row footer">
+		    <div class="col-xs-12">
+		        <div class="container">
+		     		<span class="copy-right col-sm-6 col-xs-12 text-left">&copy; 2015 COPYRIGHT DESIGN STUDIO</span>
+		     		<span class="design  col-sm-6 col-xs-12 text-right">DESIGNED BY sym.com</span>
+		     	</div>
+		    </div>
+	    </div>
+	<!-- Footer -->
+      
+
+ 
+       </div> <!-- end fluid container -->
+        
+       <script src="Js/jquery-3.2.1.min.js"></script>
+       <script src="Js/jquery.nicescroll.min.js"></script>
+       <script src="Js/wow.js"></script>
+       <script src="Js/bootstrap.js"></script>
+       <script src="Js/custom.js"></script>
+       <script src="Js/scroll.js"></script>
+	</body>
+</html>
